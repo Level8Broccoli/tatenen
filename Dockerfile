@@ -8,6 +8,7 @@ RUN apt-get update \
   ansible \
   cargo \
   cmake \
+  fzf \
   git \
   python3 \
   zsh \
@@ -29,4 +30,3 @@ ENV PATH="$PATH:/home/$USER/.cargo/bin"
 
 COPY ./dotfiles/ /home/$USER
 
-ENTRYPOINT ["/bin/zsh"]
