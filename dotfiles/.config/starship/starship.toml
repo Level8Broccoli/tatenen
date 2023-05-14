@@ -1,0 +1,45 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+format = """
+$character\
+"""
+
+right_format = """
+[](fg:medium)\
+[$hostname ](fg:accent bg:medium)\
+[](fg:light bg:medium)\
+[](fg:light_contrast bg:light)\ 
+[](fg:accent bg:light)\
+[$directory](bold fg:accent_contrast bg:accent)\
+[](fg:accent bg:dark)\
+[$time](fg:dark_contrast bg:dark)\
+[ ](fg:dark)\
+"""
+
+palette = 'tatenen'
+
+[palettes.tatenen]
+accent = '#FCA17D'
+accent_contrast = 'black'
+light = '#a3aed2'
+light_contrast = '#090c0b'
+medium = '#394260'
+dark = '#1d2230'
+dark_contrast = '#a0a9cb'
+
+[character]
+success_symbol = '[➜](bold green) '
+error_symbol = '[✗](bold red) '
+
+[hostname]
+ssh_only = false
+format = '$hostname'
+
+[directory]
+format = "  $path "
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+format = '  $time'
+
