@@ -1,10 +1,4 @@
-"$schema" = "https://starship.rs/config-schema.json"
-
 format = """
-$character\
-"""
-
-right_format = """
 [](fg:medium)\
 [$hostname ](fg:accent bg:medium)\
 [](fg:light bg:medium)\
@@ -14,7 +8,7 @@ right_format = """
 [](fg:accent bg:dark)\
 [$time](fg:dark_contrast bg:dark)\
 [ ](fg:dark)\
-"""
+\n$character"""
 
 palette = 'tatenen'
 
@@ -27,13 +21,13 @@ medium = '#394260'
 dark = '#1d2230'
 dark_contrast = '#a0a9cb'
 
-[character]
-success_symbol = '[➜](bold green) '
-error_symbol = '[✗](bold red) '
-
 [hostname]
 ssh_only = false
 format = '$hostname'
+
+[character]
+success_symbol = '[➜](bold green) '
+error_symbol = '[✗](bold red) '
 
 [directory]
 format = "  $path "

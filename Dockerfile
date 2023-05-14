@@ -9,6 +9,7 @@ RUN apt-get update \
   cargo \
   cmake \
   fzf \
+  neovim \
   git \
   python3 \
   zsh \
@@ -30,3 +31,4 @@ ENV PATH="$PATH:/home/$USER/.cargo/bin"
 
 COPY ./dotfiles/ /home/$USER
 
+ENTRYPOINT ["/usr/bin/zsh"]
