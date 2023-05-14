@@ -8,6 +8,6 @@
 ## Launch interactive shell 
 
 ```sh
-docker compose run --rm tatenen zsh
+docker compose run --rm tatenen 
 ```
-
+s;dlfjs
