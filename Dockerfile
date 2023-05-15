@@ -11,7 +11,6 @@ RUN apt-get update \
   fzf \
   neovim \
   git \
-  python3 \
   zsh \
   && rm -rf /var/lib/apt/lists/*
 
@@ -29,6 +28,6 @@ RUN cargo install \
   starship --locked
 ENV PATH="$PATH:/home/$USER/.cargo/bin"
 
-COPY ./dotfiles/ /home/$USER
+COPY --chown=$USER ./home/ /home/$USER
 
-ENTRYPOINT ["/usr/bin/zsh"]
+ENTRYPOINT ["ssh-agent", "/usr/bin/zsh"]
