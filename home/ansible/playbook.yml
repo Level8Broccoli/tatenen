@@ -1,29 +1,7 @@
 ---
 - hosts: all
   become: true
-  #  gather_facts: no 
 
-  #  vars:
-  #    key_source: ./vault/
-  #    key_dest: "{{ lookup('env', 'HOME') }}/.ssh/"
-  #
-  #  pre_tasks:
-  #    - name: Ensure SSH directory exists.
-  #      ansible.builtin.file:
-  #        dest: "{{ key_dest | dirname }}"
-  #        mode: 0700
-  #        owner: "{{ ansible_user }}" 
-  #        state: directory
-  #      delegate_to: 127.0.0.1
-  #    - name: Install SSH key
-  #      ansible.builtin.copy:
-  #        src: "{{ key_source }}/id_rsa"
-  #        dest: "{{ key_dest | dirname }}/id_rsa"
-  #        mode: 0600
-  #        owner: "{{ ansible_user }}" 
-  #    - name: Gathering facts 
-  #      setup:
-  #
   tasks:
     - name: Set hostname
       ansible.builtin.hostname:
@@ -51,9 +29,3 @@
         name: "{{ item }}"
       loop: [ 'docker', 'docker-compose' ]
 
-  #  post_tasks:
-  #    - name: Lock SSH key "{{ ssh_key_file }}"
-  #      ansible.builtin.command: ssh-add -d "{{ ssh_key_file }}"
-  #      delegate_to: 127.0.0.1
-  #      become: no
-  #      changed_when: no
