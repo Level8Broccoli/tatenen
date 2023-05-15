@@ -30,4 +30,4 @@ ENV PATH="$PATH:/home/$USER/.cargo/bin"
 
 COPY --chown=$USER ./home/ /home/$USER
 
-ENTRYPOINT ["ssh-agent", "/usr/bin/zsh"]
+ENTRYPOINT ["/usr/bin/zsh"]
