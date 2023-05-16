@@ -6,4 +6,6 @@
       tags: init
     - role: docker
       tags: docker
+    - role: caddy
+      tags: caddy
 
