@@ -1,0 +1,10 @@
+---
+proxies:
+  - name: kemet.ch
+    port: 9000
+  - name: test.kemet.ch
+    port: 9999
+
+redirects:
+  - name: www.kemet.ch
+    to: kemet.ch

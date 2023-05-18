@@ -1,0 +1,21 @@
+{
+  # debug
+  email mail@amun-ra.ch # Mainly used when creating an ACME account with your CA, and is highly recommended in case there are problems with your certificates.
+}
+
+{% for proxy in proxies %}
+
+{{ proxy.name }} {
+  encode zstd gzip
+  reverse_proxy 127.0.0.1:{{ proxy.port }}
+}
+
+{% endfor %}
+
+{% for redirect in redirects %}
+
+{{ redirect.name }} {
+  redir https://{{ redirect.to }}
+}
+
+{% endfor %}
