@@ -2,7 +2,7 @@
 proxies:
   - name: kemet.ch
     port: 9000
-  - name: uptime2.kemet.ch
+  - name: uptime.kemet.ch
     port: 3001
 
 redirects:
