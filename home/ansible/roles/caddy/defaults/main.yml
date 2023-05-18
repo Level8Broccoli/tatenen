@@ -1,4 +1,5 @@
 ---
+
 # Packages
 caddy_package: caddy
 caddy_package_state: present

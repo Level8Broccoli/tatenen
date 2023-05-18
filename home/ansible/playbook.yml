@@ -1,4 +1,5 @@
 ---
+
 - hosts: all
   become: true
   roles:
@@ -8,12 +9,6 @@
       tags: docker
     - role: caddy
       tags: caddy
-    - role: dc-portainer
-      tags: 
-      - container
-      - portainer
-    - role: dc-uptime-kurma
-      tags: 
-      - container
-      - uptime
+    - role: projects
+      tags: projects
 
