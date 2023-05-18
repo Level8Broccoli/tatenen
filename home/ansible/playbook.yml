@@ -8,4 +8,6 @@
       tags: docker
     - role: caddy
       tags: caddy
+    - role: dc-portainer
+      tags: dc
 

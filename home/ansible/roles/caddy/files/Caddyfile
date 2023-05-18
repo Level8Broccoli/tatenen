@@ -5,7 +5,7 @@
 
 kemet.ch {
   encode zstd gzip
-  reverse_proxy 127.0.0.1:1111
+  reverse_proxy 127.0.0.1:9000
 }
 
 www.kemet.ch {

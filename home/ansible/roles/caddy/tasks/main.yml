@@ -33,3 +33,4 @@
   ansible.builtin.copy:
     src: Caddyfile
     dest: /etc/caddy/Caddyfile
+  notify: restart caddy
