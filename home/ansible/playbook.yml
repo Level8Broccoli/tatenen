@@ -9,5 +9,11 @@
     - role: caddy
       tags: caddy
     - role: dc-portainer
-      tags: dc
+      tags: 
+      - container
+      - portainer
+    - role: dc-uptime-kurma
+      tags: 
+      - container
+      - uptime
 
