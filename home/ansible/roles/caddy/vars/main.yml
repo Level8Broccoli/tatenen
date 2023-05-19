@@ -5,6 +5,8 @@ proxies:
     port: 9000
   - name: uptime.kemet.ch
     port: 3001
+  - name: auto.kemet.ch
+    port: 5678
 
 redirects:
   - name: www.kemet.ch

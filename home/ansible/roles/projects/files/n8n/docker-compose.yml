@@ -1,0 +1,20 @@
+
+version: "3"
+
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    ports:
+    - "5678:5678"
+    container_name: n8n
+    restart: always
+    volumes:
+    - n8n_data:/home/node/.n8n
+    environment:
+    - WEBHOOK_URL=https://auto.kemet.ch
+#    - DOMAIN_NAME=kemet.ch
+#    - SUBDOMAIN=auto
+
+volumes:
+  n8n_data:
+
