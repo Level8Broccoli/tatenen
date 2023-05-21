@@ -11,6 +11,8 @@ proxies:
     port: 3000
   - name: db.kemet.ch
     port: 8055
+  - name: feed.kemet.ch
+    port: 8001
 
 redirects:
   - name: www.kemet.ch
