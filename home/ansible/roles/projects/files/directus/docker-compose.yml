@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  directus:
+    image: directus/directus:10.1.1
+    container_name: Directus
+    ports:
+      - 8055:8055
+    volumes:
+      - directus_uploads_data:/directus/uploads
+      - directus_database_data:/directus/database
+    env_file:
+      - .env
+    environment:
+      DB_CLIENT: 'sqlite3'
+      DB_FILENAME: './database/data.db'
+
+volumes:
+  directus_uploads_data:
+  directus_database_data:

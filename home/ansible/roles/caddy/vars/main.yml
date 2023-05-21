@@ -9,6 +9,8 @@ proxies:
     port: 5678
   - name: lvl8.io
     port: 3000
+  - name: db.kemet.ch
+    port: 8055
 
 redirects:
   - name: www.kemet.ch
