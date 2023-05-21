@@ -1,4 +1,3 @@
-
 version: "3"
 
 services:
@@ -12,8 +11,6 @@ services:
     - n8n_data:/home/node/.n8n
     environment:
     - WEBHOOK_URL=https://auto.kemet.ch
-#    - DOMAIN_NAME=kemet.ch
-#    - SUBDOMAIN=auto
 
 volumes:
   n8n_data:

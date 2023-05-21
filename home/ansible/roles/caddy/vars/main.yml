@@ -7,7 +7,11 @@ proxies:
     port: 3001
   - name: auto.kemet.ch
     port: 5678
+  - name: lvl8.io
+    port: 3000
 
 redirects:
   - name: www.kemet.ch
     to: kemet.ch
+  - name: www.lvl8.io
+    to: lvl8.io
