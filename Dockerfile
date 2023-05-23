@@ -2,6 +2,7 @@ FROM ubuntu:22.10
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG USER=ptah
+ARG SCRIPTDIR=/tmp/install
 
 RUN apt-get update \
   && apt-get install -y \
@@ -29,5 +30,8 @@ RUN cargo install \
 ENV PATH="$PATH:/home/$USER/.cargo/bin"
 
 COPY --chown=$USER ./home/ /home/$USER
+
+COPY --chown=$USER ./install/ $SCRIPTDIR
+RUN SCRIPTDIR=$SCRIPTDIR . $SCRIPTDIR/install-all.zsh 
 
 ENTRYPOINT ["/usr/bin/zsh"]
