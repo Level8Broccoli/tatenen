@@ -10,7 +10,7 @@ services:
     volumes:
     - n8n_data:/home/node/.n8n
     environment:
-    - WEBHOOK_URL=https://auto.kemet.ch
+    - WEBHOOK_URL=https://flow.kemet.ch
 
 volumes:
   n8n_data:
