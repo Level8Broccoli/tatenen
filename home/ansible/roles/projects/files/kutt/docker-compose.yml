@@ -4,6 +4,7 @@ services:
   kutt:
     image: kutt/kutt
     container_name: Kutt
+    restart: always
     depends_on:
       - postgres
       - redis
