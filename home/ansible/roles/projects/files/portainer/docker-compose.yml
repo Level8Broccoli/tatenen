@@ -2,7 +2,7 @@ version: "3"
 
 services:
   portainer:
-    image: portainer/portainer-ce:latest
+    image: portainer/portainer-ce@sha256:d0e89bf59a3e8bb479226579673934a6338e4ffbe6946d4a55e12af632727c03
     ports:
     - "9000:9000"
     container_name: Portainer

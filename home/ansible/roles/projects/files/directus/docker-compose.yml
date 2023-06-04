@@ -2,7 +2,7 @@ version: '3'
 
 services:
   directus:
-    image: directus/directus:10.1.1
+    image: directus/directus@sha256:b213944fb16e99e0554f52ade9252c89f481454d09746d4319ab7e097fdf585a
     container_name: Directus
     restart: always
     ports:

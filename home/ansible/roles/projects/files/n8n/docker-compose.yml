@@ -2,7 +2,7 @@ version: "3"
 
 services:
   n8n:
-    image: docker.n8n.io/n8nio/n8n:latest
+    image: docker.n8n.io/n8nio/n8n@sha256:6eaa815beb29b0398860250b587a62f09b62f1b30eeb1612830b500f84a737d6
     ports:
     - "5678:5678"
     container_name: n8n

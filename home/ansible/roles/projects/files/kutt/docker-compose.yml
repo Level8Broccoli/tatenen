@@ -2,7 +2,7 @@ version: "3"
 
 services:
   kutt:
-    image: kutt/kutt
+    image: kutt/kutt@sha256:340fae3678e5f9ba6b40761d72e5c6992331bef678b5a0fcc8afea83ab735f41
     container_name: Kutt
     restart: always
     depends_on:
