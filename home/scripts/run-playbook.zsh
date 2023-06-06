@@ -1,3 +1,3 @@
 #!/usr/bin/zsh
 
-ansible-playbook ~/volume/ansible/playbook.yml --user root --ask-vault-password "$@"
+ansible-playbook ~/ansible/playbook.yml --user root --ask-vault-password "$@"
