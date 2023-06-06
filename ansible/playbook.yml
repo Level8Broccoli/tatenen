@@ -5,6 +5,8 @@
   roles:
     - role: init
       tags: init
+    - role: security
+      tags: security
     - role: docker
       tags: docker
     - role: caddy
