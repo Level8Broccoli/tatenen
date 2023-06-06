@@ -4,3 +4,5 @@ services:
   tatenen:
     build: .
     hostname: tatenen
+    volumes:
+      - "./volume/:/home/ptah/volume/"
