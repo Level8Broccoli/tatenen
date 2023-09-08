@@ -1,2 +1,6 @@
-kemet.ch
-oliverbucher.ch
+[vps]
+amun-ra.ch hostname=amun-ra.ch
+kemet.ch hostname=kemet.ch
+
+[rs]
+oliverbucher.ch hostname=oliverbucher.ch

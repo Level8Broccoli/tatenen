@@ -2,11 +2,17 @@
 
 - name: Set hostname
   ansible.builtin.hostname:
-    name: kemet.ch
+    name: "{{ hostname }}"
 
 - name: Install required system packages
   ansible.builtin.apt: 
-    name: "{{ item }}"
+    name: 
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - software-properties-common
+      - python3-pip
+      - virtualenv
+      - python3-setuptools
     state: latest 
     update_cache: yes
-  loop: [ 'apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common', 'python3-pip', 'virtualenv', 'python3-setuptools']
