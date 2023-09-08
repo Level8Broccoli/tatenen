@@ -1,6 +1,0 @@
----
-
-- name: restart caddy
-  ansible.builtin.service:
-    name: caddy 
-    state: "{{ caddy_restart_handler_state }}"

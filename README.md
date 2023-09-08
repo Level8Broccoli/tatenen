@@ -8,5 +8,5 @@
 ## Launch interactive shell 
 
 ```sh
-docker compose run --rm tatenen
+# docker compose run --rm tatenen
 ```

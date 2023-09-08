@@ -5,4 +5,4 @@ services:
     build: .
     hostname: tatenen
     volumes:
-      - "./ansible/:/root/ansible/"
+      - "./src/:/root/src/"

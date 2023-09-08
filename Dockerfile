@@ -9,7 +9,7 @@ RUN apt-get update \
   tmux \
   && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /root/
+WORKDIR /root/src/
 COPY --chown=root ./home/ /root/
 
 ENTRYPOINT ["/bin/bash"]
