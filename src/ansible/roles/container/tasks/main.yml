@@ -22,15 +22,11 @@
     state: present
     update_cache: yes 
 
-- name: Update apt and install docker-ce
+- name: Update apt and install docker-ce and the docker compose plugin
   ansible.builtin.apt: 
-    name: docker-ce
+    name: 
+      - docker-ce
+      - docker-compose-plugin
     state: present 
     update_cache: no 
-
-- name: Install Docker and Docker Compose Module for Python
-  ansible.builtin.pip:
-    name:
-      - docker
-      - docker-compose
 
