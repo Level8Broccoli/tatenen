@@ -1,0 +1,15 @@
+---
+
+- hosts: all
+  become: true
+  vars_files:
+    - ./vars.yml
+  vars:
+    - ansible_port: "{{ new_ssh_port }}"
+  roles:
+    - role: firewall
+      tags: firewall 
+    - role: upgrades
+      tags: upgrades 
+    - role: container
+      tags: container 

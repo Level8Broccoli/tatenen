@@ -1,0 +1,51 @@
+---
+
+- name: Install packages
+  ansible.builtin.package:
+    name:
+      - ufw
+    state: present
+
+- name: Configuring service
+  ansible.builtin.copy:
+    src: ufw
+    dest: /etc/default/ufw
+  notify: reload ufw
+
+- name: Applying ssh rule
+  community.general.ufw:
+    rule: limit
+    port: "{{ new_ssh_port }}"
+    proto: tcp
+  notify: reload ufw
+
+- name: Applying http rule
+  community.general.ufw:
+    rule: allow
+    port: 80
+    proto: tcp
+  notify: reload ufw
+
+- name: Applying https rule
+  community.general.ufw:
+    rule: allow
+    port: 443
+    proto: tcp
+  notify: reload ufw
+
+- name: Applying incoming default rule
+  community.general.ufw:
+    default: deny
+    direction: incoming
+  notify: reload ufw
+
+- name: Applying outgoing default rule
+  community.general.ufw:
+    default: allow
+    direction: outgoing
+  notify: reload ufw
+
+- name: Configuring service state
+  community.general.ufw:
+    state: enabled
+  notify: reload ufw
