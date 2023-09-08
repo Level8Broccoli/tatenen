@@ -4,3 +4,5 @@
   roles:
     - role: init
       tags: init
+    - role: restrict
+      tags: restrict

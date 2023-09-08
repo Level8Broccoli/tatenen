@@ -1,0 +1,13 @@
+---
+
+- name: "Disable SSH password authentication"
+  ansible.builtin.lineinfile:
+    path: "/etc/ssh/sshd_config"
+    regex: '^(\#|\s)*PasswordAuthentication\s*(yes|no)$'
+    line: "PasswordAuthentication no"
+
+- name: Change ssh port
+  ansible.builtin.template:
+    src: changePort.j2
+    dest: /etc/ssh/sshd_config.d/changePort.conf
+  notify: restart ssh
