@@ -14,3 +14,7 @@
       tags: upgrades 
     - role: container
       tags: container 
+    - role: reverse-proxy
+      tags: reverse-proxy
+    - role: projects
+      tags: projects

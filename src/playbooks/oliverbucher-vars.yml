@@ -1,0 +1,9 @@
+---
+hostname: oliverbucher.ch
+
+proxies:
+  - name: oliverbucher.ch
+    service: demo 
+
+projects:
+  - demo
