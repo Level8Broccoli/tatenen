@@ -7,6 +7,6 @@ services:
 
 networks:
   default:
-    external:
-      name: caddy
+    name: caddy
+    external: true
 

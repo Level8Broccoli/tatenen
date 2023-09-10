@@ -6,7 +6,10 @@ proxies:
     service: demo:8000
   - name: ls.oliverbucher.ch
     service: portainer:9000
+  - name: monitor.oliverbucher.ch
+    service: grafana:3000
 
 projects:
   - demo
   - portainer
+  - monitoring

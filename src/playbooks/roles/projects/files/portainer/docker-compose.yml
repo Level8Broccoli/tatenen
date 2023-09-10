@@ -4,16 +4,15 @@ services:
   portainer:
     image: portainer/portainer-ce
     container_name: Portainer
-    restart: always
+    restart: unless-stopped
     volumes:
     - /var/run/docker.sock:/var/run/docker.sock
     - portainer_data:/data
 
 volumes:
   portainer_data:
-
+  
 networks:
   default:
-    external:
-      name: caddy
-
+    name: caddy
+    external: true
