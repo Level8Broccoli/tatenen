@@ -4,6 +4,9 @@ hostname: oliverbucher.ch
 proxies:
   - name: oliverbucher.ch
     service: demo:8000
+  - name: ls.oliverbucher.ch
+    service: portainer:9000
 
 projects:
   - demo
+  - portainer

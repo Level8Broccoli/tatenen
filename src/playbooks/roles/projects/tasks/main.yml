@@ -17,14 +17,14 @@
     - name: Tear down existing containers
       ansible.builtin.shell:
         cmd: docker compose down
-        chdir: "/projects/{{ item }}/"
+        chdir: "/projects/{{ item.item }}/"
       when: item.changed
       loop: "{{ p.results }}"
 
     - name: Build and start service
       ansible.builtin.shell:
         cmd: docker compose up -d
-        chdir: "/projects/{{ item }}/"
+        chdir: "/projects/{{ item.item }}/"
       when: item.changed
       loop: "{{ p.results }}"
   when: projects is defined
