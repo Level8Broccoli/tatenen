@@ -1,6 +1,6 @@
 [vps]
-amun-ra.ch hostname=amun-ra.ch
-kemet.ch hostname=kemet.ch
+amun-ra.ch tag=amun-ra
+kemet.ch tag=kemet
 
 [rs]
-oliverbucher.ch hostname=oliverbucher.ch
+oliverbucher.ch tag=oliverbucher
