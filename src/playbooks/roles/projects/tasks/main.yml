@@ -1,0 +1,30 @@
+---
+
+- block:
+    - name: Create project folders
+      ansible.builtin.file:
+        path: "/projects/{{ item }}/"
+        state: directory
+      loop: "{{ projects }}"
+
+    - name: Add files
+      ansible.builtin.copy:
+        src: "{{ item }}/"
+        dest: "/projects/{{ item }}/"
+      register: p
+      loop: "{{ projects }}"
+
+    - name: Tear down existing containers
+      ansible.builtin.shell:
+        cmd: docker compose down
+        chdir: "/projects/{{ item }}/"
+      when: item.changed
+      loop: "{{ p.results }}"
+
+    - name: Build and start service
+      ansible.builtin.shell:
+        cmd: docker compose up -d
+        chdir: "/projects/{{ item }}/"
+      when: item.changed
+      loop: "{{ p.results }}"
+  when: projects is defined

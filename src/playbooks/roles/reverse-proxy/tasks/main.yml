@@ -1,0 +1,30 @@
+---
+
+- name: Create caddy folder
+  ansible.builtin.file:
+    path: /projects/caddy/
+    state: directory
+
+- name: Add docker compose file 
+  ansible.builtin.copy:
+    src: docker-compose.yml 
+    dest: /projects/caddy/
+  register: changeCompose 
+
+- name: Add Caddyfile
+  ansible.builtin.template:
+    src: Caddyfile.j2
+    dest: /projects/caddy/Caddyfile
+  register: changeFile
+
+- name: Tear down existing containers
+  ansible.builtin.shell:
+    cmd: docker compose down
+    chdir: /projects/caddy/
+  when: changeCompose is changed or changeFile is changed
+
+- name: Build and start service
+  ansible.builtin.shell:
+    cmd: docker compose up -d
+    chdir: /projects/caddy/
+  when: changeCompose is changed or changeFile is changed

@@ -3,7 +3,7 @@ hostname: oliverbucher.ch
 
 proxies:
   - name: oliverbucher.ch
-    service: demo 
+    service: demo:8000
 
 projects:
   - demo
