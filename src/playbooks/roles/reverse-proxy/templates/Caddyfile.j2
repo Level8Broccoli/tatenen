@@ -7,7 +7,7 @@
 
 {% for proxy in proxies %}
 
-{{ proxy.name }} {
+{{ proxy.url}} {
   encode zstd gzip
   reverse_proxy {{ proxy.service }}
 }

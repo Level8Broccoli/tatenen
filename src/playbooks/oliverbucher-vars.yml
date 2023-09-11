@@ -2,11 +2,11 @@
 hostname: oliverbucher.ch
 
 proxies:
-  - name: oliverbucher.ch
+  - url: oliverbucher.ch
     service: demo:8000
-  - name: ls.oliverbucher.ch
+  - url: ls.oliverbucher.ch
     service: portainer:9000
-  - name: monitor.oliverbucher.ch
+  - url: monitor.oliverbucher.ch
     service: grafana:3000
 
 projects:
