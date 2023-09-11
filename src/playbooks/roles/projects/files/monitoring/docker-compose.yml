@@ -18,6 +18,8 @@ services:
     restart: unless-stopped
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
+    logging:
+      driver: journald
 
   grafana:
     image: grafana/grafana-oss
@@ -27,6 +29,8 @@ services:
     volumes:
       - grafana-data:/var/lib/grafana
     restart: unless-stopped
+    logging:
+      driver: journald
 
   cadvisor:
     image: gcr.io/cadvisor/cadvisor 
@@ -41,6 +45,8 @@ services:
       - /dev/disk/:/dev/disk:ro
     devices:
       - /dev/kmsg
+    logging:
+      driver: journald
 
   node_exporter:
     image: quay.io/prometheus/node-exporter
@@ -51,6 +57,8 @@ services:
     restart: unless-stopped
     volumes:
       - '/:/host:ro,rslave'
+    logging:
+      driver: journald
     
 networks:
   default:

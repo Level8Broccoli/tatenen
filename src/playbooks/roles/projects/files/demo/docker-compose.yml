@@ -4,6 +4,8 @@ services:
   demo:
     image: crccheck/hello-world
     container_name: hello-world
+    logging:
+      driver: journald
 
 networks:
   default:
