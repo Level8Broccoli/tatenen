@@ -1,6 +1,6 @@
 {
   # debug
-  email mail@amun-ra.ch # Mainly used when creating an ACME account with your CA, and is highly recommended in case there are problems with your certificates.
+  email {{ email }} # Mainly used when creating an ACME account with your CA, and is highly recommended in case there are problems with your certificates.
 }
 
 {% if proxies is defined %}
